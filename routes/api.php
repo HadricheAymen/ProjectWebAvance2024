@@ -17,11 +17,11 @@ Route::middleware('api')->group(function () {
 });
 
 
-    Route::post('/login', [AuthController::class, 'login']);
-    Route::post('/register', [AuthController::class, 'register']);
-    Route::post('/logout', [AuthController::class, 'logout']);
-    Route::post('/refreshToken', [AuthController::class, 'refresh']);
-    Route::get('/user-profile', [AuthController::class, 'userProfile']);
+Route::post('/login', [AuthController::class, 'login']);
+Route::post('/register', [AuthController::class, 'register']);
+Route::post('/logout', [AuthController::class, 'logout']);
+Route::post('/refreshToken', [AuthController::class, 'refresh']);
+Route::get('/user-profile', [AuthController::class, 'userProfile']);
 
 Route::get('users/verify-email', [AuthController::class, 'verifyEmail'])
     ->name('verify.email');

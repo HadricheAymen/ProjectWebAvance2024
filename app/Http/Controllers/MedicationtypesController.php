@@ -58,4 +58,18 @@ class MedicationtypesController extends Controller
             return response()->json($e->getMessage());
         }
     }
+
+    public function medicationtypePaginate() { 
+        try { 
+            $perPage = request()->input('pageSize', 5); // Récupère la valeur dynamique pour la pagination 
+            $medicationstypes = Medicationtypes::paginate($perPage); // Retourne le résultat en format JSON API 
+            return response()->json(
+           ['medication' => $medicationstypes->items(), // Les articles paginés 
+                'totalPages' => $medicationstypes->lastPage(), // Le nombre de pages 
+        ]); } 
+        catch (\Exception $e) 
+        { 
+            return response()->json("Selection impossible {$e->getMessage()}"); 
+        } 
+    }
 }

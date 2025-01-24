@@ -13,7 +13,7 @@ requests">
 
 <body>
     <div id="root"></div>
-    <script src="{{ secure_asset('frontend/assets/index-CR6cIUMy.js')
+    <script src="{{ secure_asset('frontend/assets/index-kZKUDiEY.js')
 }}"></script>
 </body>
 

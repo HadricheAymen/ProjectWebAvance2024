@@ -32,7 +32,7 @@ class AuthController extends Controller
         return response()->json([
             'success' => true,
             'token' => $jwt_token,
-            'user' => Auth::user(),
+            'user' => auth(),
         ]);
     }
     /**

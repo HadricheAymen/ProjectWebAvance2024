@@ -120,4 +120,18 @@ class PrescriptionController extends Controller
             return response()->json("Selection impossible {$e->getMessage()}"); 
         } 
     }
+    public function prescriptionPaginateByPatient($patientID) { 
+        try { 
+            $perPage = request()->input('pageSize', 5); // Récupère la valeur dynamique pour la pagination 
+            $prescriptions = Prescription::with('patient', 'prescriptionsmedication')
+            ->where('patientID', $patientID)->paginate($perPage); // Retourne le résultat en format JSON API 
+            return response()->json(
+           ['medication' => $prescriptions->items(), // Les articles paginés 
+                'totalPages' => $prescriptions->lastPage(), // Le nombre de pages 
+        ]); } 
+        catch (\Exception $e) 
+        { 
+            return response()->json("Selection impossible {$e->getMessage()}"); 
+        } 
+    }
 }

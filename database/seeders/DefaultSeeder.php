@@ -32,7 +32,12 @@ class DefaultSeeder extends Seeder
             ['name' => 'Antipsychotics'],
             ['name' => 'Antivirals'],
             ['name' => 'Antianxiety Drugs'],
-            ['name' => 'Antiemetics']
+            ['name' => 'Antiemetics'],
+            ['name' => 'Anticonvulsants'],
+            ['name' => 'Antidepressants'],
+            ['name' => 'Antipsychotics'],
+            ['name' => 'Antiseptics'],
+
         ]);
 
         $AntibioticsID = DB::table('medicationtypes')->where('name','Antibiotics')->value('id');
@@ -64,11 +69,18 @@ class DefaultSeeder extends Seeder
             ['name' => 'Metformin','medicationtypeID' => $Antiemetics],
             ['name' => 'Glimepiride','medicationtypeID' => $Antiemetics],
             ['name' => 'Insulin','medicationtypeID' => $Antiemetics],
+            ['name' => 'Metformin','medicationtypeID' => $Antiemetics],
+            ['name' => 'Glimepiride','medicationtypeID' => $Antiemetics],
+            ['name' => 'Insulin','medicationtypeID' => $Antiemetics],
         ]);
         DB::table('patients')->insert([
             ['name' => 'patient1', 'datenaissance' => '1/1/1999'],
             ['name' => 'patient2', 'datenaissance' => '5/4/1990'],
-            ['name' => 'patient3', 'datenaissance' => '5/4/1990'],
+            ['name' => 'patient3', 'datenaissance' => '5/4/1991'],
+            ['name' => 'patient4', 'datenaissance' => '5/4/1992'],
+            ['name' => 'patient5', 'datenaissance' => '5/4/1993'],
+            ['name' => 'patient6', 'datenaissance' => '5/4/1994'],
+            ['name' => 'patient7', 'datenaissance' => '5/4/1995'],
         ]);
 
         DB::table('prescriptions')->insert([

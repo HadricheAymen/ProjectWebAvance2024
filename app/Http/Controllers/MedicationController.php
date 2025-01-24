@@ -9,7 +9,7 @@ class MedicationController extends Controller
 {
     public function index(){
         try {
-            $medication = Medication::all();
+            $medication = Medication::with('medicationtypes')->get();
             return response()->json($medication);
         }
         catch (\Exception $e) {

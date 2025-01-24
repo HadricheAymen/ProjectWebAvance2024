@@ -31,5 +31,6 @@ Route::get('/prescriptionsbyPatient/{patientID}', [PrescriptionController::class
 
 Route::get('/paginatemedication', [MedicationController::class, 'medicationPaginate']);
 Route::get('/paginateprescription', [PrescriptionController::class, 'prescriptionPaginate']);
+Route::get('/paginateprescriptionbyPatient/{patientID}', [PrescriptionController::class, 'prescriptionPaginateByPatient']);
 Route::get('/paginatepatient', [PatientsController::class, 'patientPaginate']);
 Route::get('/paginatemedicationtype', [MedicationtypesController::class, 'medicationtypePaginate']);

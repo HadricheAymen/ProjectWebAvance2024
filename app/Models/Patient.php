@@ -13,6 +13,7 @@ class Patient extends Model
         'name',
         'datanaissance',
         'email',
+        'phone',
     ];
 
     public function prescription() {

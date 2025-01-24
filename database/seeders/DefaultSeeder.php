@@ -74,13 +74,13 @@ class DefaultSeeder extends Seeder
             ['name' => 'Insulin','medicationtypeID' => $Antiemetics],
         ]);
         DB::table('patients')->insert([
-            ['name' => 'patient1', 'datenaissance' => '1/1/1999'],
-            ['name' => 'patient2', 'datenaissance' => '5/4/1990'],
-            ['name' => 'patient3', 'datenaissance' => '5/4/1991'],
-            ['name' => 'patient4', 'datenaissance' => '5/4/1992'],
-            ['name' => 'patient5', 'datenaissance' => '5/4/1993'],
-            ['name' => 'patient6', 'datenaissance' => '5/4/1994'],
-            ['name' => 'patient7', 'datenaissance' => '5/4/1995'],
+            ['name' => 'patient1', 'datenaissance' => '1/1/1999', 'email' => 'patient1@patient1.com', 'phone' => '1234567890'],
+            ['name' => 'patient2', 'datenaissance' => '5/4/1990', 'email' => 'patient2@patient2.com', 'phone' => '1234567891'],
+            ['name' => 'patient3', 'datenaissance' => '5/4/1991', 'email' => 'patient3@patient3.com', 'phone' => '1234567892'],
+            ['name' => 'patient4', 'datenaissance' => '5/4/1992', 'email' => 'patient4@patient4.com', 'phone' => '1234567893'],
+            ['name' => 'patient5', 'datenaissance' => '5/4/1993', 'email' => 'patient5@patient5.com', 'phone' => '1234567894'],
+            ['name' => 'patient6', 'datenaissance' => '5/4/1994', 'email' => 'patient6@patient6.com', 'phone' => '1234567895'],
+            ['name' => 'patient7', 'datenaissance' => '5/4/1995', 'email' => 'patient7@patient7.com', 'phone' => '1234567896'],
         ]);
 
         DB::table('prescriptions')->insert([

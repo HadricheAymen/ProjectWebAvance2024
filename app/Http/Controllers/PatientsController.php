@@ -64,7 +64,7 @@ class PatientsController extends Controller
             $perPage = request()->input('pageSize', 5); // Récupère la valeur dynamique pour la pagination 
             $patients = Patient::paginate($perPage); // Retourne le résultat en format JSON API 
             return response()->json(
-           ['medication' => $patients->items(), // Les articles paginés 
+           ['patients' => $patients->items(), // Les articles paginés 
                 'totalPages' => $patients->lastPage(), // Le nombre de pages 
         ]); } 
         catch (\Exception $e) 

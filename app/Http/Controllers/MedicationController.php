@@ -62,7 +62,7 @@ class MedicationController extends Controller
     public function medicationPaginate() { 
         try { 
             $perPage = request()->input('pageSize', 5); // Récupère la valeur dynamique pour la pagination 
-            $medications = Medication::paginate($perPage); // Retourne le résultat en format JSON API 
+            $medications = Medication::with('medicationtypes')->paginate($perPage); // Retourne le résultat en format JSON API 
             return response()->json(
            ['medications' => $medications->items(), // Les articles paginés 
                 'totalPages' => $medications->lastPage(), // Le nombre de pages 
